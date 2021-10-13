@@ -1,0 +1,36 @@
+{
+  "name": "mvo/contao-xdebug",
+  "type": "contao-bundle",
+  "description": "Strips the XDEBUG_SESSION cookie from the request.",
+  "keywords": ["xdebug"],
+  "license": "MIT",
+  "authors": [
+    {
+      "name": "Moritz Vondano",
+      "homepage": "https://github.com/m-vo/contao-xdebug"
+    }
+  ],
+  "require": {
+    "php": ">=8.0"
+  },
+  "require-dev": {
+    "contao/manager-plugin": "^2.0",
+    "contao/easy-coding-standard": "^3.0"
+  },
+  "conflict": {
+    "contao/manager-plugin": "<2.0 || >=3.0"
+  },
+  "autoload": {
+    "psr-4": {
+      "Mvo\\ContaoXdebug\\": "src/"
+    }
+  },
+  "extra": {
+    "contao-manager-plugin": "Mvo\\ContaoXdebug\\ContaoManager\\Plugin"
+  },
+  "scripts": {
+    "cs": [
+      "vendor/bin/ecs check src/ --fix --ansi"
+    ]
+  }
+}

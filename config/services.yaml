@@ -1,0 +1,5 @@
+services:
+  mvo.contao_xdebug.strip_cookie_listener:
+    class: Mvo\ContaoXdebug\EventListener\StripCookieListener
+    tags:
+      - { name: 'kernel.event_listener', event: kernel.request, priority: 38 }
